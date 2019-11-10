@@ -1,0 +1,25 @@
+
+<h4>Word Count</h4>
+
+<form action="{% url 'home' %}">
+    <br>
+    <input type="submit" value="Count Again"/>
+</form>
+
+<h2>One, Two, Three, {{ count }} words ah ah ah.</h2>
+
+<h1>Your text: </h1>
+{{ fulltext }}
+
+<h1>Word count: </h1>
+
+
+<br>
+
+{% for word, count_t in sorted_dict %}
+
+<p>{{ word }}: {{ count_t }}</p>
+<br>
+
+{% endfor %}
+<br>
